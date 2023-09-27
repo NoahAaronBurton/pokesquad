@@ -14,10 +14,21 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+      len: { 
+          args: [7, 42],
+          msg: "The password length should be between 7 and 42 characters."
+       }
+      },
     }
   },
   {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'user'
