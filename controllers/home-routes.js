@@ -8,4 +8,13 @@ router.get('/', async (req,res) => {
     }
 })
 
+router.get('/sign-up', async (req,res) => { //todo: get route for POST
+    try {
+        res.render('sign-up')
+    } catch (err) {
+        console.error('Sequelize Error:', err.name);
+        console.error('Error Details:', err);
+        res.status(500).json(err);
+    }
+})
 module.exports = router;
