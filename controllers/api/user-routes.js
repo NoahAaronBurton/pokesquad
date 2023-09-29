@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.post('/', async (req, res) => { // todo: finish this route
+router.post('/', async (req, res) => {
     try {
         console.log('user POST route used')
         const newUserData = await User.create(req.body);
@@ -16,5 +16,7 @@ router.post('/', async (req, res) => { // todo: finish this route
     res.status(500).json(err);
 }
 })
+
+
 
 module.exports = router;

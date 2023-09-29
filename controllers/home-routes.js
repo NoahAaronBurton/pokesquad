@@ -8,7 +8,9 @@ router.get('/', async (req,res) => {
     }
 })
 
-router.get('/sign-up', async (req,res) => { //todo: get route for POST
+
+
+router.get('/sign-up', async (req,res) => { 
     try {
         res.render('sign-up')
     } catch (err) {
