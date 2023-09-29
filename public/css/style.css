@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'PokemonGB';
+    src: url('../fonts/PKMN-RBYGSC.ttf') format('truetype');
+}
+
+
+body {
+    font-family: 'PokemonGB';
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: -webkit-linear-gradient(top, red 50%, white 50%);
+}
+
+#submit-create {
+    font-family: 'PokemonGB';
+}
+
+.wrap {
+    width: 100%;
+    background: black;
+    margin: 0 auto;
+    padding: 0.25em 0.625em;
+}
+
+header {
+    margin: auto;
+}
+
+h2 {
+    margin: auto;
+}
+
