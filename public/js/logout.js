@@ -12,5 +12,5 @@ const logout = async () => {
       alert(response.statusText);
     }
   };
-  
+  //todo: update event listener when front end view is ready
   document.querySelector('#logout').addEventListener('click', logout);
