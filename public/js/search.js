@@ -1,3 +1,21 @@
+async function fetchPokemonStats(pokemonName) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch data for ${pokemonName}`);
+    }
+    const data = await response.json();
+    
+    // Extract the stats array from the response
+    const stats = data.stats;
+    console.log(stats);
+    
+    return stats;
+}
+
+$(document).ready(function () {
+    console.log('ready test!')
+})
+
 $(document).ready(function() { // chapt gpt helped with this function
   var content = [];
 
@@ -18,3 +36,8 @@ $(document).ready(function() { // chapt gpt helped with this function
       })
       .catch(error => console.error('Error fetching Pokémon data:', error));
 });
+
+
+const squad = [];
+
+
