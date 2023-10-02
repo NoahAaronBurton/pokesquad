@@ -9,11 +9,7 @@ async function fetchPokemonStats(pokemonNames) {
     
     const pokemonStats ={};
 
-    // if (!response.ok) {
-    //     throw new Error(`Failed to fetch data for ${pokemonName}`);
-    // }
-
-    await Promise.all(pokemonNames.map(async (pokemonName) => {
+    await Promise.all(pokemonNames.map(async (pokemonName) => { // chat gpt helped with this function
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
         if (!response.ok) {
@@ -21,13 +17,17 @@ async function fetchPokemonStats(pokemonNames) {
         }
         const data = await response.json();
 
-        const stats = data.stats;
-        const hp = stats.find(stat => stat.stat.name === "hp").base_stat
 
-        //todo: add all stats available in poke api
-        pokemonStats[pokemonName] = {
-            "hp": hp
-        };
+        // get stats from api object
+        const stats = data.stats;
+
+        statObject= {};
+
+        stats.forEach(stat => {
+            statObject[stat.stat.name] = stat.base_stat;
+        });
+
+        pokemonStats[pokemonName] = statObject;
     })) 
     return pokemonStats;
 }
