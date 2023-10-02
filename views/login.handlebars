@@ -1,19 +1,35 @@
+<img id="pokeSprites" src="/images/PokeSquad.png" width="500" height="300">
 <h2>Login to create your Team!</h2>
 {{!-- PokeSquads logo? Could be above it or below. --}}
 
 <div class="ui middle aligned center aligned grid">
     <div class="column">
-        <div class="ui large form">
-            <div class="ui stacked element">
+        <form class="ui large form">
+            <div id="ui-content" class="ui middle aligned stacked element">
                 <div class="field">
+
+                    <input type="text" placeholder="Username" id="username">
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="Password" id="password">
+
                     <input type="text" placeholder="Enter your Username here" id="username-login">
                 </div>
                 <div class="field">
-                    <input type="text" placeholder="Enter your Password here" id="password-login">
+
                 </div>
                 <button type="submit" class="ui fluid black submit button" id="submit">Sign into your Account</button>
             </div>
-        </div>
+        </form>
     </div>
 </div><h1>Log in</h1>
+
+
+
+
+
+
+{{!-- <script src="js --}}
+
 <script src="js/login.js"></script>
+
