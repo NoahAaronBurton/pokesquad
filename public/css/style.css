@@ -4,18 +4,49 @@
 }
 
 
+
 body {
     font-family: 'PokemonGB';
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-image: url('../images/pokeball-background.JPG');
-    /* background: -webkit-linear-gradient(top, red 50%, white 50%); */
+    /* background-color: red; */
+    background: -webkit-linear-gradient(top, red 50%, white 50%);
 }
 
 body > .grid {
     height: 100%;
 }
+
+/* #container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#top {
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 50%;
+    background-color:red;
+   
+}
+
+#bottom {
+    z-index: -100;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color:white;
+    
+} */
 
 .image {
     margin-top: -100px;
@@ -52,19 +83,28 @@ body > .grid {
 
 
 form {
-    /* z-index:999; */
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+    width: 325px;
+    height: 325px;
     border: 20px solid #cecece;
     border-color: black;
     border-radius: 50%;  
     background:#fff;   
   } 
 
+#center-pokeball {
+    margin-top: 50px;
+}
+
 #ui-content {
     margin: auto;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
 }
 
 .content {
@@ -90,7 +130,7 @@ header {
     margin: auto;
 }
 
-#pokeSprites {
+#poke-sprites {
     margin: auto;
     margin-top: -70px;
 }
@@ -100,7 +140,3 @@ h2 {
     margin: auto;
 }
 
-#sign-up-box {
-    border: 10px;
-    border-color: black;
-}
