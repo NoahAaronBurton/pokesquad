@@ -1,4 +1,7 @@
+const loginButton = document.getElementById('submit');
+
 const loginFormHandler = async (event) => {
+  console.log('log in button clicked')
     event.preventDefault();
   
     // Collect values from the login form
@@ -30,7 +33,5 @@ const loginFormHandler = async (event) => {
   
   
   
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+loginButton.addEventListener('click', loginFormHandler);
   
