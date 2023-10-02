@@ -7,12 +7,27 @@
                 <input class="prompt" type="text" placeholder="Search...">
                 <i class="search icon"></i>
             </div>
-            <div class="results" id="searchResults">
+            <div class="ui-grid" id="searchResults">
+                <div class="ui-grid" id="savedResults"><div>
+                        {{#each savedResults}}
+        <div class="six wide column">
+            <div class="ui segment">
+                <h2>{{this}}</h2>
+                <!-- Add more content here if needed -->
+            </div>
+        </div>
+        {{/each}}
 
+          {{#each savedResults}}
+        <div class="six wide column draggable" draggable="true">
+            <div class="ui segment">
+                <h2>{{this}}</h2>
+            </div>
+        </div>
+        {{/each}}
 
-
-
-    </div>
+   </div>
+   <script src="./js/home.js"></script>
 {{!-- 
 Have to have a way to link api to autocomplete search function --}}
 
