@@ -42,6 +42,33 @@ router.post('/login', async (req,res) => {
     }
 });
 
+router.post('/api/add-to-squad', async (req, res) => {
+    try {
+      const { pokemonName } = req.body; // Get the selected Pokémon's name from the request body
+  
+      // Find the user by their session or authentication method (you'll need to customize this based on your authentication setup)
+      const userId = req.session.user_id; // Adjust this based on your session setup
+      const user = await User.findByPk(userId);
+  
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+  
+      // Add the selected Pokémon to the user's squad (assuming 'squad' is an array field in your User model)
+      user.squad = user.squad || []; // Initialize the squad array if it doesn't exist
+      user.squad.push(pokemonName);
+  
+      // Save the updated user object
+      await user.save();
+  
+      // Respond with a success message or the updated user object if needed
+      res.json({ success: true, message: 'Pokémon added to squad' });
+    } catch (error) {
+      console.error('Error adding Pokémon to squad:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
       req.session.destroy(() => {

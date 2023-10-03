@@ -37,6 +37,22 @@ $(document).ready(function() { // chapt gpt helped with this function
                     console.log('Selected Pokémon:', selectedPokemon);
 
                     //todo: post req
+                    // Make an AJAX POST request to add the selected Pokémon to the squad
+                    $.ajax({
+                        url: '/api/add-to-squad', // Update with your server endpoint
+                        method: 'POST',
+                        data: { pokemonName: selectedPokemon }, // Send the selected Pokémon's name
+                        success: function(response) {
+                            console.log('Pokémon added to squad:', response);
+                            // Optionally, you can update the UI to reflect the change in squad
+                            // For example, add the Pokémon to the squad array and update the UI
+                        squad.push(selectedPokemon);
+          // ...
+        },
+        error: function(error) {
+          console.error('Error adding Pokémon to squad:', error);
+        },
+      });
 
                     $(response).find('input.prompt').val('');
                   }
