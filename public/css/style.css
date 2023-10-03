@@ -4,19 +4,17 @@
 }
 
 
-
 body {
     font-family: 'PokemonGB';
     margin: auto;
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
     background: -webkit-linear-gradient(top, red 50%, white 50%);
 }
 
-/* body > .grid {
+body > .grid {
     height: 100%;
-} */
+}
 
 /* #container {
     position: absolute;
@@ -24,9 +22,9 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
-}
+} */
 
-#top {
+/* #top {
     z-index: -100;
     position: absolute;
     top: 0;
@@ -52,12 +50,16 @@ body {
     margin-top: -100px;
 }
 
-/* .column {
+#main-logo {
+    margin: auto;
+}
+
+.column {
     max-width: 450px;
     margin: auto;
     margin-top: 300px;
     text-align: center;
-} */
+}
 
 .submit {
     border: 1px;
@@ -65,19 +67,17 @@ body {
 }
 
 #submit-create {
-    width: 177px;
-    height: 30PX;
     font-family: 'PokemonGB';
     margin-top: 20px;
+    color: #000;
     background-color: rgb(141, 141, 141); 
 }
 
 #submit {
-    /* width: 177px;
-    height: 30PX; */
     font-family: 'PokemonGB';
     margin-top: 20px;
     padding: 10px;
+    color: #000;
     background-color: rgb(141, 141, 141); 
 }
 
@@ -85,8 +85,8 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    width: 325px;
-    height: 325px;
+    width: 400px;
+    height: 400px;
     border: 20px solid #cecece;
     border-color: black;
     border-radius: 50%;  
@@ -94,24 +94,24 @@ form {
   } 
 
 #center-pokeball {
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 #ui-content {
     margin: auto;
 }
 
-/* .centered {
+.centered {
     position: fixed;
     top: 50%;
     left: 50%;
-} */
+}
 
-/* .content {
+.content {
     margin-top: 30%;
     font-size: 30px;
     margin-bottom: 30px;
-} */
+}
 
 .large {
     margin: auto;
@@ -125,18 +125,72 @@ form {
     margin: 10px;
 }
 
-
 header {
-    margin: auto;
+    display: flex;
+    justify-self: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
 }
 
 #poke-sprites {
-    margin: auto;
+    display: flex;
+    justify-content: center;
     margin-top: -70px;
 }
 
+.hash {
+    display: flex;
+    justify-content: space-between;
+}
 
 h2 {
     margin: auto;
 }
 
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.prompt {
+    width: 500px;
+}
+
+#card-sprite {
+    margin-left: 25%;
+    width: 150px;
+    height: 150px;
+}
+
+.ui.card {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    border: 1px solid #000;
+}
+
+/* @media (max-width: 768px) {
+    .ui.card {
+        width: 250px; 
+        height: 316.67px;
+        margin: 5px; 
+    }
+} */
+
+#top-6,
+#collection {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    margin: auto;
+}

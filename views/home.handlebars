@@ -1,44 +1,103 @@
-
-       <div class="row"> 
-            <h1>Search for Pokemon!</h1>
+<h1 class="header" style="font-family: 'PokemonGB';">Search for Pokemon!</h1> 
+<section class="search-bar">
+  <br>
+  <div class="row">
+    <div class="ui search">
+        <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="search icon"></i>
         </div>
-    <div class="row">
-        <div class="ui search">
-            <div class="ui icon input">
-                <input class="prompt" type="text" placeholder="Search...">
-                <i class="search icon"></i>
-            </div>
-            <div class="results" id="searchResults">
+    <div class="results" id="searchResults">
+  </div>
+</section>
+
+
+{{!-- User Top 6 --}}
+<section>
+  <h1 class="header" style="font-family: 'PokemonGB';">My Top 6</h1>
+  <div id="top-6" class="row">
+    {{#each pokemonStats}}
+    <div class="ui card">
+      <div class="header" style="text-transform: capitalize;"> {{@key}} </div>
+      <div>
+        <img id="card-sprite" src={{this.spriteUrl}}>
+      </div>    
+      <div class="content">
+        <div class="type hash">
+          <p style="text-transform: uppercase;">{{this.types}}</p>
+          <span>HP:{{this.hp}}</span>
         </div>
-        <div class="row">
-            {{#each pokemonStats}}
-            <div class="ui card">
-                <div class="image">
-                    <img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fraw.githubusercontent.com%2FPokeAPI%2Fsprites%2Fmaster%2Fsprites%2Fpokemon%2F6.png">
-                </div>    
-            <div class="content">
-                <a class="header"> {{@key}} </a>
-    <div class="meta">
-      <span class="date">{{this.hp}} </span>
+        <br>
+        <div class="attack hash">
+          <p>ATTACK</p>
+          <span>{{this.attack}}</span>
+        </div>
+        <div class="defense hash">
+          <p>DEFENSE</p>
+          <span>{{this.defense}}</span>
+        </div>
+        <div class="speed hash">
+          <p>SPEED</p>
+          <span>{{this.speed}}</span>
+        </div>
+        <div class="special hash">
+          <p>SPECIAL ATTACK</p>
+          <span>{{this.special-attack}}</span>
+        </div>
+        <div class="special hash">
+          <p>SPECIAL DEFENSE</p>
+          <span>{{this.special-defense}}</span>
+        </div>
+      </div>
     </div>
-    <div class="description">
-      {{this.type}}
+    {{/each}}
+  </div>
+</section>
+
+
+{{!-- User collection --}}
+<section>
+  <h1 class="header" style="font-family: 'PokemonGB';">My Collection</h1>
+  <div id="collection" class="row">
+    {{#each pokemonStats}}
+    <div class="ui card">
+      <div class="header" style="text-transform: capitalize;"> {{@key}} </div>
+      <div>
+        <img id="card-sprite" src={{this.spriteUrl}}>
+      </div>    
+      <div class="content">
+        <div class="type hash">
+          <p style="text-transform: uppercase;">{{this.types}}</p>
+          <span>HP:{{this.hp}}</span>
+        </div>
+        <br>
+        <div class="attack hash">
+          <p>ATTACK</p>
+          <span>{{this.attack}}</span>
+        </div>
+        <div class="defense hash">
+          <p>DEFENSE</p>
+          <span>{{this.defense}}</span>
+        </div>
+        <div class="speed hash">
+          <p>SPEED</p>
+          <span>{{this.speed}}</span>
+        </div>
+        <div class="special hash">
+          <p>SPECIAL ATTACK</p>
+          <span>{{this.special-attack}}</span>
+        </div>
+        <div class="special hash">
+          <p>SPECIAL DEFENSE</p>
+          <span>{{this.special-defense}}</span>
+        </div>
+      </div>
     </div>
+    {{/each}}
   </div>
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      22 Friends
-    </a>
-  </div>
-</div>
-{{/each}}
+</section>
 
-
-
-
-
-
+<script src="/public/js/search.js"></script>
 
 
 
