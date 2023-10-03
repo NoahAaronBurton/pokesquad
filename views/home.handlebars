@@ -1,19 +1,39 @@
-<h2>Welcome to PokeSquads!</h2>
 
-    <div class="ui container">
-        <h1>Search for Pokemon!</h1>
+       <div class="row"> 
+            <h1>Search for Pokemon!</h1>
+        </div>
+    <div class="row">
         <div class="ui search">
             <div class="ui icon input">
                 <input class="prompt" type="text" placeholder="Search...">
                 <i class="search icon"></i>
             </div>
             <div class="results" id="searchResults">
-
-
-
-
+        </div>
+        <div class="row">
+            {{#each pokemonStats as |pokemon|}}
+            <div class="ui card">
+                <div class="image">
+                    <img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fraw.githubusercontent.com%2FPokeAPI%2Fsprites%2Fmaster%2Fsprites%2Fpokemon%2F6.png">
+                </div>    
+            <div class="content">
+                <a class="header">{{pokemon.name}}</a>
+    <div class="meta">
+      <span class="date">Joined in 2013</span>
     </div>
-
+    <div class="description">
+      Kristy is an art director living in New York.
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      22 Friends
+    </a>
+  </div>
+</div>
+            {{/each}}
+        </div>
 
 
 
