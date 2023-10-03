@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Pikachu",
+      "type": "Electric",
+      "user_id": 1
+    },
+    {
+      "name": "Charizard",
+      "type": "Fire/Flying",
+      "user_id": 1
+    },
+    {
+      "name": "Bulbasaur",
+      "type": "Grass/Poison",
+      "user_id": 1
+    },
+    {
+      "name": "Squirtle",
+      "type": "Water",
+      "user_id": 1
+    },
+    {
+      "name": "Jigglypuff",
+      "type": "Normal/Fairy",
+      "user_id": 1
+    },
+    {
+      "name": "Snorlax",
+      "type": "Normal",
+      "user_id": 1
+    }
+  ]
+  

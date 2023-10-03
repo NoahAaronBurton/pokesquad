@@ -28,7 +28,11 @@ User.init(
           msg: "The password length should be between 7 and 42 characters."
        }
       },
-    }
+    },
+    squad: { // todo: limit to six
+      type: DataTypes.JSON, // Specify the data type for elements inside the array
+      defaultValue: [], // Default value for an empty array
+    },
   },
   {
     hooks: {
