@@ -14,11 +14,11 @@ body {
     background: -webkit-linear-gradient(top, red 50%, white 50%);
 }
 
-/* body > .grid {
+body > .grid {
     height: 100%;
-} */
+}
 
-/* #container {
+#container {
     position: absolute;
     top: 0;
     right: 0;
@@ -26,7 +26,7 @@ body {
     bottom: 0;
 }
 
-#top {
+/* #top {
     z-index: -100;
     position: absolute;
     top: 0;
@@ -50,6 +50,10 @@ body {
 
 .image {
     margin-top: -100px;
+}
+
+#main-logo {
+    margin: auto;
 }
 
 .column {
@@ -132,7 +136,7 @@ header {
 
 #poke-sprites {
     margin: auto;
-    margin-top: -70px;
+    margin-top: -330px;
 }
 
 .hash {
