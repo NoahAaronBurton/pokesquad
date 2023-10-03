@@ -7,16 +7,16 @@
 
 body {
     font-family: 'PokemonGB';
-    margin: 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
     /* background-color: red; */
     background: -webkit-linear-gradient(top, red 50%, white 50%);
 }
 
-body > .grid {
+/* body > .grid {
     height: 100%;
-}
+} */
 
 /* #container {
     position: absolute;
@@ -52,12 +52,12 @@ body > .grid {
     margin-top: -100px;
 }
 
-.column {
+/* .column {
     max-width: 450px;
     margin: auto;
     margin-top: 300px;
     text-align: center;
-}
+} */
 
 .submit {
     border: 1px;
@@ -101,17 +101,17 @@ form {
     margin: auto;
 }
 
-.centered {
+/* .centered {
     position: fixed;
     top: 50%;
     left: 50%;
-}
+} */
 
-.content {
+/* .content {
     margin-top: 30%;
     font-size: 30px;
     margin-bottom: 30px;
-}
+} */
 
 .large {
     margin: auto;

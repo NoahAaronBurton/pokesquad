@@ -23,6 +23,9 @@ async function fetchPokemonStats(pokemonNames) {
             statObject[stat.stat.name] = stat.base_stat;
         });
 
+        statObject.spriteUrl = data.sprites.front_default;
+        statObject.types = data.types.map(type => type.type.name);
+
         pokemonStats[pokemonName] = statObject;
     })) 
     return pokemonStats;
