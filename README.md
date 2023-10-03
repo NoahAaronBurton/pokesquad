@@ -31,13 +31,20 @@ This site is currently hosted on [Heroku](INSERT HEROKU LINK) and can also be ru
 
 ## [Installation](#table-of-contents)
 
+- No installation is required for front end users
+
 - Clone Repository
 - Run `npm i` to install dependencies
+- `npm start`
+- `node server.js`
 
 ## [Usage](#table-of-contents)
 
-- `npm start`
-- `node server.js`
+- Creating an account is free & easy.
+- Click the link & choose your Username & Password to Login.
+- Enjoy collecting & comparing your PokeSquads 
+
+- [Click her to start building your PokeSquad!!!](insert deployed Heroku site link here)
 
 ## [Contributors](#table-of-contents)
 
@@ -48,5 +55,5 @@ This site is currently hosted on [Heroku](INSERT HEROKU LINK) and can also be ru
 
 ## [Questions](#table-of-contents)
 
-- If you have any questions please [**Email**](mailto:Insert@EmailHere.com) me Ü
-- Check out more of my work at [**GitHub**](https://github.com/NoahAaronBurton) Ü
+- If you have any questions please [**Email**](mailto:Insert@EmailHere.com) me 
+- Check out more of my work at [**GitHub**](https://github.com/NoahAaronBurton) 
