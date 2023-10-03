@@ -1,12 +1,8 @@
 const router = require('express').Router();
 const withAuth = require('../utils/helpers/auth');
-
-const pokemonNames = ["pikachu", "charizard", "bulbasaur", "squirtle", "jigglypuff", "snorlax"]
+const { User } = require('../models');
 
 async function fetchPokemonStats(pokemonNames) {
-
-    // const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-    
     const pokemonStats ={};
 
     await Promise.all(pokemonNames.map(async (pokemonName) => { // chat gpt helped with this function
@@ -35,10 +31,19 @@ async function fetchPokemonStats(pokemonNames) {
 
 router.get('/', withAuth, async (req,res) => {
     try {
-        console.log('Logged in?:  ' + req.session.logged_in);
+        const userId = req.session.user_id;
+        // console.log('user id:  '+ userId);
 
-        //todo: call pokemon stats function and send to front end
-        const pokemonStats = await fetchPokemonStats(pokemonNames);
+        const user = await User.findByPk(userId);
+        const username = user.username
+        // console.log('Username:', username);
+
+        // chatgpt wrote this line
+        const squad = user.squad ? Object.values(user.squad) : [];
+
+        console.log(squad);
+
+        const pokemonStats = await fetchPokemonStats(squad);
 
         console.log(pokemonStats)
 
@@ -47,7 +52,8 @@ router.get('/', withAuth, async (req,res) => {
             pokemonStats : pokemonStats
         })
     } catch (err) {
-        res.status(500).json(err)
+        console.error('Error in /login:', err);
+        res.status(500).json({ error: "Internal Server Error" });
     }
 })
 

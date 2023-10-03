@@ -32,7 +32,7 @@ router.post('/login', async (req,res) => {
         }
 
         req.session.save(() => {
-            req.session.username = dbUser.id;
+            req.session.user_id = dbUser.id;
             req.session.logged_in = true;
             res.json({ user: dbUser, message: 'Logged in'})
         })

@@ -15,7 +15,12 @@ const hbs = exphbs.create({helpers: withAuth});
 
 const sess = {
   secret:'pink cookie',
-  cookie: {}, //todo: add cookie data
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  }, //todo: add cookie data
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
