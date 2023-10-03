@@ -7,16 +7,16 @@
 
 body {
     font-family: 'PokemonGB';
-    margin: 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
     /* background-color: red; */
     background: -webkit-linear-gradient(top, red 50%, white 50%);
 }
 
-body > .grid {
+/* body > .grid {
     height: 100%;
-}
+} */
 
 /* #container {
     position: absolute;
