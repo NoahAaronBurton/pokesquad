@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 <div class="row"> 
     {{!-- <h1>Search for Pokemon!</h1> --}}
 </div>
@@ -18,11 +17,11 @@
   <div class="ui card">
     <div class="header" style="text-transform: capitalize;"> {{@key}} </div>
     <div>
-      <img id="front-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
+      <img id="front-sprite" src={{this.spriteUrl}}>
     </div>    
     <div class="content">
       <div class="type hash">
-        <p>Fire/Flying</p>
+        <p style="text-transform: capitalize;">{{this.types}}</p>
         <span>HP:{{this.hp}}</span>
       </div>
       <br>
@@ -46,43 +45,6 @@
   </div>
   {{/each}}
 </div>
-=======
-       <div class="row"> 
-            <h1>Search for Pokemon!</h1>
-        </div>
-    <div class="row">
-        <div class="ui search">
-            <div class="ui icon input">
-                <input class="prompt" type="text" placeholder="Search...">
-                <i class="search icon"></i>
-            </div>
-            <div class="results" id="searchResults">
-        </div>
-        <div class="row">
-            {{#each pokemonStats}}
-            <div class="ui card">
-                <div class="image">
-                    <img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fraw.githubusercontent.com%2FPokeAPI%2Fsprites%2Fmaster%2Fsprites%2Fpokemon%2F6.png">
-                </div>    
-            <div class="content">
-                <a class="header"> {{@key}} </a>
-    <div class="meta">
-      <span class="date">{{this.hp}} </span>
-    </div>
-    <div class="description">
-      {{this.type}}
-    </div>
-  </div>
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      22 Friends
-    </a>
-  </div>
-</div>
-{{/each}}
-
->>>>>>> f77315efc493a853d60549366cdb6168b5b0e94e
 
 
 
