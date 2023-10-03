@@ -32,6 +32,14 @@ $(document).ready(function() { // chapt gpt helped with this function
           $('.ui.search')
               .search({
                   source: content,
+                  onSelect: function(result, response) {
+                    const selectedPokemon = result.title;
+                    console.log('Selected Pokémon:', selectedPokemon);
+
+                    //todo: post req
+
+                    $(response).find('input.prompt').val('');
+                  }
               });
       })
       .catch(error => console.error('Error fetching Pokémon data:', error));
