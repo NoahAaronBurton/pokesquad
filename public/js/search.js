@@ -47,7 +47,7 @@ $(document).ready(function() { // chapt gpt helped with this function
                             // Optionally, you can update the UI to reflect the change in squad
                             // For example, add the Pokémon to the squad array and update the UI
                         squad.push(selectedPokemon);
-          // ...
+                        console.log(squad);
         },
         error: function(error) {
           console.error('Error adding Pokémon to squad:', error);
